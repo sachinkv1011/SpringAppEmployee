@@ -16,7 +16,7 @@ public class EmployeeController {
     public String  addEmployee(){
         return "Add employee page";
     }
-    @GetMapping("/serach")
+    @GetMapping("/search")
     public String  searchEmployee(){
         return "Search employee page";
     }
@@ -27,6 +27,10 @@ public class EmployeeController {
     @GetMapping("/viewall")
     public String  viewEmployee(){
         return "View employee page";
+    }
+    @GetMapping("/delete")
+    public String  deleteEmployee(){
+        return "Search employee page";
     }
 
 }

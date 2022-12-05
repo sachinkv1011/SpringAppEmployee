@@ -16,5 +16,9 @@ public class EmployeeController {
     public String  addEmployee(){
         return "Add employee page";
     }
+    @GetMapping("/serach")
+    public String  searchEmployee(){
+        return "Search employee page";
+    }
 
 }

@@ -30,7 +30,7 @@ public class EmployeeController {
     }
     @GetMapping("/delete")
     public String  deleteEmployee(){
-        return "Search employee page";
+        return "Delete employee page";
     }
 
 }

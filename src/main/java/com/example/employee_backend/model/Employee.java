@@ -89,7 +89,7 @@ public class Employee {
         return mobileNo;
     }
 
-    public void setMobileNo(String mobileName) {
+    public void setMobileNo(String mobileNo) {
         this.mobileNo = mobileNo;
     }
 

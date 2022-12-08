@@ -18,7 +18,7 @@ public class EmployeeController {
     public String home(){
         return "welcome employee home page";
     }
-
+    @CrossOrigin(origins = "*")
     @PostMapping(path="/add",consumes = "application/json",produces = "application/json")
     public String  addEmployee(@RequestBody Employee e)
      {
@@ -34,9 +34,12 @@ public class EmployeeController {
 
         return "Add employee successfully";
     }
-    @PostMapping("/search")
-    public String  searchEmployee(){
-        return "Search employee page";
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/search",consumes = "application/json",produces = "application/json")
+    public List<Employee>  searchEmployee(@RequestBody Employee e){
+        String empCode= String.valueOf(e.getEmpCode());
+        System.out.println(empCode);
+        return (List<Employee>) dao.searchEmployee(e.getEmpCode());
     }
     @PostMapping("/edit")
     public String  editEmployee(){
